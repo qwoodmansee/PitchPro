@@ -111,10 +111,34 @@ class IntervalsViewController: UIViewController {
     @IBAction func harmonicMelodicSegmentedControlValueChanged(sender: UISegmentedControl) {
         if (sender.selectedSegmentIndex == 0) {
             myIntervalPlayStyle = "Harmonic"
+            if (playSwitch.on) {
+                myInstrumentBase.stop()
+                myInstrumentHarmony.stop()
+                delay(0.1) {
+                    self.myInstrumentBase.play()
+                    self.myInstrumentHarmony.play()
+                
+                }
+            }
         }
+            
         else {
             myIntervalPlayStyle = "Melodic"
+            if (playSwitch.on) {
+                myInstrumentBase.stop()
+                myInstrumentHarmony.stop()
+                //TODO(quinton): implement melodic playing
+                delay(0.1) {
+                    self.myInstrumentBase.playForDuration(1.0)
+                }
+                delay(1.0) {
+                    if (self.playSwitch.on) {
+                        self.myInstrumentHarmony.playForDuration(1.0)
+                    }
+                }
+            }
         }
+
     }
     
     //---------------------------------------------------------------
@@ -123,13 +147,18 @@ class IntervalsViewController: UIViewController {
         
         if (playSwitch.on)
         {
-            myInstrumentBase.play()
             if (myIntervalPlayStyle == "Harmonic") {
+                myInstrumentBase.play()
                 myInstrumentHarmony.play()
             }
             else {
                 //TODO(quinton): implement melodic playing
-                myInstrumentHarmony.stop()
+                myInstrumentBase.playForDuration(1.0)
+                delay(0.9) {
+                    if (self.playSwitch.on) {
+                        self.myInstrumentHarmony.playForDuration(1.0)
+                    }
+                }
             }
         }
         else
@@ -334,7 +363,22 @@ class IntervalsViewController: UIViewController {
     }
  
     //---------------------------------------------------------------
- 
+    //Simple delay function to dispatch after a certain amount of time
+    //got from matt at http://stackoverflow.com/questions/24034544/dispatch-after-gcd-in-swift/24318861#24318861
+    
+    
+    func delay(delay:Double, closure:()->()) {
+        dispatch_after(
+            dispatch_time(
+                DISPATCH_TIME_NOW,
+                Int64(delay * Double(NSEC_PER_SEC))
+            ),
+            dispatch_get_main_queue(), closure)
+    }
+    
+    //---------------------------------------------------------------
+
+    
     /*
     // MARK: - Navigation
 
