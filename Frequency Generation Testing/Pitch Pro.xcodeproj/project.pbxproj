@@ -17,8 +17,7 @@
 		5A60BFE01C47FDD30001412B /* IntervalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A60BFDF1C47FDD30001412B /* IntervalsViewController.swift */; };
 		5A9439521C4745EA004BAD96 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A9439511C4745EA004BAD96 /* Images.xcassets */; };
 		5AA1A9B31C45BB4D00EF2850 /* Instrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA1A9B21C45BB4D00EF2850 /* Instrument.swift */; };
-		5AEDAEA21C455C3100F1FD39 /* libAudioKit iOS Static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AEDAE991C455C1500F1FD39 /* libAudioKit iOS Static.a */; };
-		5AEDAEA41C455CBA00F1FD39 /* AudioKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEDAEA31C455CBA00F1FD39 /* AudioKit.swift */; };
+		5AD424831C95E1FE001B50FB /* libAudioKit iOS Static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A668B3C1C8F89560038FB65 /* libAudioKit iOS Static.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,37 +35,37 @@
 			remoteGlobalIDString = 5A3A884C1C453920001374A5;
 			remoteInfo = "Frequency Generation Testing";
 		};
-		5AEDAE981C455C1500F1FD39 /* PBXContainerItemProxy */ = {
+		5A668B3B1C8F89560038FB65 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 5AEDAE911C455C1500F1FD39 /* AudioKit.xcodeproj */;
+			containerPortal = 5A668B341C8F89560038FB65 /* AudioKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = EA8E93D81AD3C5240057E979;
 			remoteInfo = "AudioKit iOS Static";
 		};
-		5AEDAE9A1C455C1500F1FD39 /* PBXContainerItemProxy */ = {
+		5A668B3D1C8F89560038FB65 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 5AEDAE911C455C1500F1FD39 /* AudioKit.xcodeproj */;
+			containerPortal = 5A668B341C8F89560038FB65 /* AudioKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = EAA0F5941AE71C8F007CD7C9;
 			remoteInfo = "AudioKit iOS Dynamic";
 		};
-		5AEDAE9C1C455C1500F1FD39 /* PBXContainerItemProxy */ = {
+		5A668B3F1C8F89560038FB65 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 5AEDAE911C455C1500F1FD39 /* AudioKit.xcodeproj */;
+			containerPortal = 5A668B341C8F89560038FB65 /* AudioKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = EA8E96591AD3C6FC0057E979;
 			remoteInfo = "AudioKit OS X";
 		};
-		5AEDAE9E1C455C1500F1FD39 /* PBXContainerItemProxy */ = {
+		5A668B411C8F89560038FB65 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 5AEDAE911C455C1500F1FD39 /* AudioKit.xcodeproj */;
+			containerPortal = 5A668B341C8F89560038FB65 /* AudioKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = EA93645D1BD865230005B849;
 			remoteInfo = "AudioKit tvOS";
 		};
-		5AEDAEA01C455C2500F1FD39 /* PBXContainerItemProxy */ = {
+		5AD424811C95E1BC001B50FB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 5AEDAE911C455C1500F1FD39 /* AudioKit.xcodeproj */;
+			containerPortal = 5A668B341C8F89560038FB65 /* AudioKit.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = EA8E93D71AD3C5240057E979;
 			remoteInfo = "AudioKit iOS Static";
@@ -88,10 +87,9 @@
 		5A3A88701C453921001374A5 /* Frequency_Generation_TestingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Frequency_Generation_TestingUITests.swift; sourceTree = "<group>"; };
 		5A3A88721C453921001374A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A60BFDF1C47FDD30001412B /* IntervalsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntervalsViewController.swift; sourceTree = "<group>"; };
+		5A668B341C8F89560038FB65 /* AudioKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = AudioKit.xcodeproj; sourceTree = "<group>"; };
 		5A9439511C4745EA004BAD96 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5AA1A9B21C45BB4D00EF2850 /* Instrument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Instrument.swift; sourceTree = "<group>"; };
-		5AEDAE911C455C1500F1FD39 /* AudioKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AudioKit.xcodeproj; path = ../../../../../../../Desktop/AudioKit/AudioKit.xcodeproj; sourceTree = "<group>"; };
-		5AEDAEA31C455CBA00F1FD39 /* AudioKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioKit.swift; path = ../../../../../../../Desktop/AudioKit/AudioKit/Platforms/Swift/AudioKit.swift; sourceTree = "<group>"; };
 		5AEDAEA51C455D1C00F1FD39 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,7 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5AEDAEA21C455C3100F1FD39 /* libAudioKit iOS Static.a in Frameworks */,
+				5AD424831C95E1FE001B50FB /* libAudioKit iOS Static.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,8 +122,7 @@
 		5A3A88441C453920001374A5 = {
 			isa = PBXGroup;
 			children = (
-				5AEDAEA31C455CBA00F1FD39 /* AudioKit.swift */,
-				5AEDAE911C455C1500F1FD39 /* AudioKit.xcodeproj */,
+				5A668B341C8F89560038FB65 /* AudioKit.xcodeproj */,
 				5A3A884F1C453920001374A5 /* Frequency Generation Testing */,
 				5A3A88641C453921001374A5 /* Frequency Generation TestingTests */,
 				5A3A886F1C453921001374A5 /* Frequency Generation TestingUITests */,
@@ -178,13 +175,13 @@
 			path = "Frequency Generation TestingUITests";
 			sourceTree = "<group>";
 		};
-		5AEDAE921C455C1500F1FD39 /* Products */ = {
+		5A668B351C8F89560038FB65 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5AEDAE991C455C1500F1FD39 /* libAudioKit iOS Static.a */,
-				5AEDAE9B1C455C1500F1FD39 /* libAudioKit iOS Dynamic.a */,
-				5AEDAE9D1C455C1500F1FD39 /* libAudioKit OS X.a */,
-				5AEDAE9F1C455C1500F1FD39 /* libAudioKit tvOS.a */,
+				5A668B3C1C8F89560038FB65 /* libAudioKit iOS Static.a */,
+				5A668B3E1C8F89560038FB65 /* libAudioKit iOS Dynamic.a */,
+				5A668B401C8F89560038FB65 /* libAudioKit OS X.a */,
+				5A668B421C8F89560038FB65 /* libAudioKit tvOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -203,7 +200,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				5AEDAEA11C455C2500F1FD39 /* PBXTargetDependency */,
+				5AD424821C95E1BC001B50FB /* PBXTargetDependency */,
 			);
 			name = "Pitch Pro";
 			productName = "Frequency Generation Testing";
@@ -285,8 +282,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 5AEDAE921C455C1500F1FD39 /* Products */;
-					ProjectRef = 5AEDAE911C455C1500F1FD39 /* AudioKit.xcodeproj */;
+					ProductGroup = 5A668B351C8F89560038FB65 /* Products */;
+					ProjectRef = 5A668B341C8F89560038FB65 /* AudioKit.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -299,32 +296,32 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		5AEDAE991C455C1500F1FD39 /* libAudioKit iOS Static.a */ = {
+		5A668B3C1C8F89560038FB65 /* libAudioKit iOS Static.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = "libAudioKit iOS Static.a";
-			remoteRef = 5AEDAE981C455C1500F1FD39 /* PBXContainerItemProxy */;
+			remoteRef = 5A668B3B1C8F89560038FB65 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		5AEDAE9B1C455C1500F1FD39 /* libAudioKit iOS Dynamic.a */ = {
+		5A668B3E1C8F89560038FB65 /* libAudioKit iOS Dynamic.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = "libAudioKit iOS Dynamic.a";
-			remoteRef = 5AEDAE9A1C455C1500F1FD39 /* PBXContainerItemProxy */;
+			remoteRef = 5A668B3D1C8F89560038FB65 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		5AEDAE9D1C455C1500F1FD39 /* libAudioKit OS X.a */ = {
+		5A668B401C8F89560038FB65 /* libAudioKit OS X.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = "libAudioKit OS X.a";
-			remoteRef = 5AEDAE9C1C455C1500F1FD39 /* PBXContainerItemProxy */;
+			remoteRef = 5A668B3F1C8F89560038FB65 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		5AEDAE9F1C455C1500F1FD39 /* libAudioKit tvOS.a */ = {
+		5A668B421C8F89560038FB65 /* libAudioKit tvOS.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = "libAudioKit tvOS.a";
-			remoteRef = 5AEDAE9E1C455C1500F1FD39 /* PBXContainerItemProxy */;
+			remoteRef = 5A668B411C8F89560038FB65 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -363,7 +360,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AA1A9B31C45BB4D00EF2850 /* Instrument.swift in Sources */,
-				5AEDAEA41C455CBA00F1FD39 /* AudioKit.swift in Sources */,
 				5A60BFE01C47FDD30001412B /* IntervalsViewController.swift in Sources */,
 				5A3A88531C453920001374A5 /* ViewController.swift in Sources */,
 				5A3A88511C453920001374A5 /* AppDelegate.swift in Sources */,
@@ -399,10 +395,10 @@
 			target = 5A3A884C1C453920001374A5 /* Pitch Pro */;
 			targetProxy = 5A3A886D1C453921001374A5 /* PBXContainerItemProxy */;
 		};
-		5AEDAEA11C455C2500F1FD39 /* PBXTargetDependency */ = {
+		5AD424821C95E1BC001B50FB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "AudioKit iOS Static";
-			targetProxy = 5AEDAEA01C455C2500F1FD39 /* PBXContainerItemProxy */;
+			targetProxy = 5AD424811C95E1BC001B50FB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -522,7 +518,7 @@
 				PRODUCT_NAME = "Pitch Pro";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Frequency Generation Testing/Bridging-Header.h";
-				USER_HEADER_SEARCH_PATHS = "~/Desktop/AudioKit/AudioKit/**";
+				USER_HEADER_SEARCH_PATHS = "AudioKit/**";
 			};
 			name = Debug;
 		};
@@ -539,7 +535,7 @@
 				PRODUCT_NAME = "Pitch Pro";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Frequency Generation Testing/Bridging-Header.h";
-				USER_HEADER_SEARCH_PATHS = "~/Desktop/AudioKit/AudioKit/**";
+				USER_HEADER_SEARCH_PATHS = "AudioKit/**";
 			};
 			name = Release;
 		};
