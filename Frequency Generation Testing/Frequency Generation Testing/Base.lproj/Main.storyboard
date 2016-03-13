@@ -458,6 +458,9 @@
                                     <segment title="Ascending"/>
                                     <segment title="Descending"/>
                                 </segments>
+                                <connections>
+                                    <action selector="intervalDirectionChanged:" destination="jHi-RK-pgh" eventType="valueChanged" id="q9c-0g-imL"/>
+                                </connections>
                             </segmentedControl>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="0.0" maxValue="4" translatesAutoresizingMaskIntoConstraints="NO" id="yVs-z4-ASa">
                                 <rect key="frame" x="18" y="306" width="181" height="31"/>
@@ -517,6 +520,7 @@
                         <outlet property="fundamentalNoteSegmentedControl" destination="jrb-rO-CxH" id="z7h-fP-lMQ"/>
                         <outlet property="fundamentalQualitySegmentedControl" destination="yUE-ty-mha" id="ug3-8a-MPu"/>
                         <outlet property="harmonicMelodicSegmentedControl" destination="FwW-ck-KH8" id="nGw-3w-Yfz"/>
+                        <outlet property="intervalDirectionSegmentedControl" destination="Shx-Dv-8bj" id="uBo-rt-Zl6"/>
                         <outlet property="intervalLabel" destination="6ws-2a-OVc" id="2We-4r-KL2"/>
                         <outlet property="intervalQualitySegmentedControl" destination="zoC-w4-Cd2" id="LDu-wC-OiP"/>
                         <outlet property="intervalSlider" destination="Njc-1X-3n9" id="5pn-A9-DdY"/>
