@@ -86,8 +86,12 @@ class IntervalsViewController: UIViewController {
     
     @IBOutlet weak var intervalQualitySegmentedControl: UISegmentedControl!
     
+    @IBOutlet weak var intervalDirectionSegmentedControl: UISegmentedControl!
+    
+    
     var myInterval: Int = 8 //note that this is number of keys, not number of steps
     var myIntervalQuality = 2; // 2 is maj/perf
+    var myIntervalDirection = 0; //0 is ascending, 1 is descending
     var myTuningSystem = 2
     
     var myFundamentalNote: String = "C"
@@ -109,15 +113,19 @@ class IntervalsViewController: UIViewController {
     //---------------------------------------------------------------
 
     @IBAction func harmonicMelodicSegmentedControlValueChanged(sender: UISegmentedControl) {
+        
+        myInstrumentBase.stop()
+        myInstrumentHarmony.stop()
+        
         if (sender.selectedSegmentIndex == 0) {
             myIntervalPlayStyle = "Harmonic"
+
             if (playSwitch.on) {
-                myInstrumentBase.stop()
-                myInstrumentHarmony.stop()
+                
+                //wait so the instruments have time to completely stop
                 delay(0.1) {
                     self.myInstrumentBase.play()
                     self.myInstrumentHarmony.play()
-                
                 }
             }
         }
@@ -125,17 +133,12 @@ class IntervalsViewController: UIViewController {
         else {
             myIntervalPlayStyle = "Melodic"
             if (playSwitch.on) {
-                myInstrumentBase.stop()
-                myInstrumentHarmony.stop()
-                //TODO(quinton): implement melodic playing
-                delay(0.1) {
-                    self.myInstrumentBase.playForDuration(1.0)
+
+                //wait so the instruments have time to completely stop
+                delay(0.2) {
+                    self.playMelodicInterval()
                 }
-                delay(1.0) {
-                    if (self.playSwitch.on) {
-                        self.myInstrumentHarmony.playForDuration(1.0)
-                    }
-                }
+
             }
         }
 
@@ -152,13 +155,7 @@ class IntervalsViewController: UIViewController {
                 myInstrumentHarmony.play()
             }
             else {
-                //TODO(quinton): implement melodic playing
-                myInstrumentBase.playForDuration(1.0)
-                delay(0.9) {
-                    if (self.playSwitch.on) {
-                        self.myInstrumentHarmony.playForDuration(1.0)
-                    }
-                }
+                playMelodicInterval()
             }
         }
         else
@@ -208,7 +205,7 @@ class IntervalsViewController: UIViewController {
         }
         
         
-        determineEqualTemperamentHarmonicFrequency()
+        determineIntervalFrequency()
         myInstrumentHarmony.frequency.value = myHarmonicFrequency
         
     }
@@ -219,10 +216,11 @@ class IntervalsViewController: UIViewController {
         
         myIntervalQuality = sender.selectedSegmentIndex
         
-        determineEqualTemperamentHarmonicFrequency()
+        determineIntervalFrequency()
         myInstrumentHarmony.frequency.value = myHarmonicFrequency
         
         }
+    
     //---------------------------------------------------------------
 
     @IBAction func tuningSystemSliderValueChanged(sender: UISlider) {
@@ -286,7 +284,31 @@ class IntervalsViewController: UIViewController {
     
     //---------------------------------------------------------------
 
+    @IBAction func intervalDirectionChanged(sender: UISegmentedControl) {
+        
+        //if ascending is selected
+        if (sender.selectedSegmentIndex == 0) {
+            
+        }
+    }
+    
+    
+    //---------------------------------------------------------------
+    func playMelodicInterval() {
+        
+        myInstrumentBase.playForDuration(1.0)
+        delay(0.9) {
+            if (self.playSwitch.on) {
+                self.myInstrumentHarmony.playForDuration(1.0)
+            }
+        }
+        
+    }
+    //---------------------------------------------------------------
     func determineIntervalFrequency() {
+        
+        //check if we need to descend instead of ascend
+        
         
         //if we are in equal temperament
         if (myTuningSystem == 2) {
