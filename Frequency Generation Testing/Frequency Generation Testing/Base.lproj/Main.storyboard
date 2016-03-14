@@ -459,7 +459,7 @@
                                     <segment title="Descending"/>
                                 </segments>
                                 <connections>
-                                    <action selector="intervalDirectionChanged:" destination="jHi-RK-pgh" eventType="valueChanged" id="q9c-0g-imL"/>
+                                    <action selector="intervalDirectionChanged:" destination="jHi-RK-pgh" eventType="valueChanged" id="iEn-x3-uF9"/>
                                 </connections>
                             </segmentedControl>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="0.0" maxValue="4" translatesAutoresizingMaskIntoConstraints="NO" id="yVs-z4-ASa">

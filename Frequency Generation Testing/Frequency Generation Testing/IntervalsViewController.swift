@@ -148,6 +148,8 @@ class IntervalsViewController: UIViewController {
 
     @IBAction func playSwitchChanged(sender: UISwitch) {
         
+        myInstrumentHarmony.frequency.value = myHarmonicFrequency
+
         if (playSwitch.on)
         {
             if (myIntervalPlayStyle == "Harmonic") {
@@ -206,7 +208,6 @@ class IntervalsViewController: UIViewController {
         
         
         determineIntervalFrequency()
-        myInstrumentHarmony.frequency.value = myHarmonicFrequency
         
     }
     
@@ -284,14 +285,12 @@ class IntervalsViewController: UIViewController {
     
     //---------------------------------------------------------------
 
-    @IBAction func intervalDirectionChanged(sender: UISegmentedControl) {
+    @IBAction func intervalDirectionChanged(sender: AnyObject) {
         
-        //if ascending is selected
-        if (sender.selectedSegmentIndex == 0) {
-            
-        }
+        myIntervalDirection = sender.selectedSegmentIndex
+        //determine the new frequency since we are now going another direction
+        determineIntervalFrequency()
     }
-    
     
     //---------------------------------------------------------------
     func playMelodicInterval() {
@@ -307,31 +306,9 @@ class IntervalsViewController: UIViewController {
     //---------------------------------------------------------------
     func determineIntervalFrequency() {
         
-        //check if we need to descend instead of ascend
-        
-        
-        //if we are in equal temperament
-        if (myTuningSystem == 2) {
-            determineEqualTemperamentHarmonicFrequency()
-        }
-        
-        
-    }
-    
-    //---------------------------------------------------------------
-
-    func determineFundamentalFrequency() {
-        
-        myFundamentalFrequency = frequencies[String(myFundamentalNote + myFundamentalQuality)]! * Float(pow(Double(2),4))
-
-
-    }
-
-    //---------------------------------------------------------------
-
-    func determineEqualTemperamentHarmonicFrequency() {
-        
         var adjustedInterval: Int = myInterval
+        
+        
         
         // if interval is diminished
         if (myIntervalQuality == 0) {
@@ -346,6 +323,41 @@ class IntervalsViewController: UIViewController {
             adjustedInterval += 1
         }
         
+        //if descending
+        if myIntervalDirection == 1 {
+            
+            //subtract 12 to bring the interval down an octave
+            adjustedInterval -= 12
+            
+        }
+
+        
+        
+        //if we are in equal temperament
+        if (myTuningSystem == 2) {
+            determineEqualTemperamentHarmonicFrequency(adjustedInterval)
+        }
+        
+        
+        myInstrumentHarmony.frequency.value = myHarmonicFrequency
+        
+    }
+    
+    //---------------------------------------------------------------
+
+    func determineFundamentalFrequency() {
+        
+        myFundamentalFrequency = frequencies[String(myFundamentalNote + myFundamentalQuality)]! * Float(pow(Double(2),4))
+
+
+    }
+
+    //---------------------------------------------------------------
+
+    func determineEqualTemperamentHarmonicFrequency(adjustedInterval: Int) {
+        
+        //equal temperament frequency equation: https://en.wikipedia.org/wiki/Equal_temperament
+        //                                      (section: Calculating absolute frequencies)
         myHarmonicFrequency = myFundamentalFrequency * pow( pow(2, (1/12)), Float(adjustedInterval))
         
     }
