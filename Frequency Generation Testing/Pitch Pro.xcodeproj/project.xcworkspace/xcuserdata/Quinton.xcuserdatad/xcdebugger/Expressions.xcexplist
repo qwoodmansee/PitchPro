@@ -10,5 +10,16 @@
             </PersistentString>
          </PersistentStrings>
       </ContextState>
+      <ContextState
+         contextName = "IntervalsViewController.determineJustIntonationHarmonicFrequency(Int) -&gt; ():IntervalsViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "justRatios[adjustedInterval]!">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "IntervalsViewController.tuningSystemSliderValueChanged(UISlider) -&gt; ():IntervalsViewController.swift">
+      </ContextState>
    </ContextStates>
 </VariablesViewState>

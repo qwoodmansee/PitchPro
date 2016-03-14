@@ -44,8 +44,7 @@ extension UISegmentedControl {
 class IntervalsViewController: UIViewController {
 
     //base frequencies upon which all intervals will be decided.
-    //TODO(quinton): Make this a dictionary instead of an array
-    var frequencies: [String : Float] = [
+    var frequencies: [String : Double] = [
         "C♮" : 16.35,
         "C#": 17.32,
         "D♮" : 18.35,
@@ -58,6 +57,38 @@ class IntervalsViewController: UIViewController {
         "A♮" : 27.50,
         "A#": 29.14,
         "B♮" :30.87]
+    
+    //ratios to find frequencies in just intonation
+    //TODO(quinton): make this go from -13 to 13, to account for augmented octaves up and down.
+
+    var justRatios: [Int : Double] = [
+        -12 : Double(1.0/2.0),
+        -11 : Double(8.0/15.0),
+        -10 : Double(5.0/9.0),
+        -9  : Double(3.0/5.0),
+        -8  : Double(5.0/8.0),
+        -7  : Double(2.0/3.0),
+        -6  : Double(32.0/45.0),
+        -5  : Double(3.0/4.0),
+        -4  : Double(4.0/5.0),
+        -3  : Double(5.0/6.0),
+        -2  : Double(8.0/9.0),
+        -1  : Double(24.0/25.0),
+        0   : Double(1.0),
+        1   : Double(25.0/24.0),
+        2   : Double(9.0/8.0),
+        3   : Double(6.0/5.0),
+        4   : Double(5.0/4.0),
+        5   : Double(4.0/3.0),
+        6   : Double(45.0/32.0),
+        7   : Double(3.0/2.0),
+        8   : Double(8.0/5.0),
+        9   : Double(5.0/3.0),
+        10  : Double(9.0/5.0),
+        11  : Double(15.0/8.0),
+        12  : Double(2.0)]
+
+
 
     //instruments which will play basic sine waves
     let myInstrumentBase = BasicSynth()
@@ -96,9 +127,9 @@ class IntervalsViewController: UIViewController {
     
     var myFundamentalNote: String = "C"
     var myFundamentalQuality: String = "♮"
-    var myFundamentalFrequency: Float = 261.63 // C♮4
+    var myFundamentalFrequency: Double = 261.63 // C♮4
     
-    var myHarmonicFrequency : Float = 392.00 // G♮4
+    var myHarmonicFrequency : Double = 392.00 // G♮4
     var myIntervalPlayStyle = "Harmonic"
     
     //---------------------------------------------------------------
@@ -148,7 +179,7 @@ class IntervalsViewController: UIViewController {
 
     @IBAction func playSwitchChanged(sender: UISwitch) {
         
-        myInstrumentHarmony.frequency.value = myHarmonicFrequency
+        myInstrumentHarmony.frequency.value = Float(myHarmonicFrequency)
 
         if (playSwitch.on)
         {
@@ -218,7 +249,7 @@ class IntervalsViewController: UIViewController {
         myIntervalQuality = sender.selectedSegmentIndex
         
         determineIntervalFrequency()
-        myInstrumentHarmony.frequency.value = myHarmonicFrequency
+        myInstrumentHarmony.frequency.value = Float(myHarmonicFrequency)
         
         }
     
@@ -243,6 +274,8 @@ class IntervalsViewController: UIViewController {
             tuningSystemLabel.text = "Error"
         }
         
+        
+        determineIntervalFrequency()
     }
 
     //---------------------------------------------------------------
@@ -276,10 +309,10 @@ class IntervalsViewController: UIViewController {
         determineIntervalFrequency()
         
         //set the fundamental instrument's pitch
-        myInstrumentBase.frequency.value = myFundamentalFrequency
+        myInstrumentBase.frequency.value = Float(myFundamentalFrequency)
         
         //set the harmonic instrument's pitch
-        myInstrumentHarmony.frequency.value = myHarmonicFrequency
+        myInstrumentHarmony.frequency.value = Float(myHarmonicFrequency)
         
     }
     
@@ -334,12 +367,20 @@ class IntervalsViewController: UIViewController {
         
         
         //if we are in equal temperament
-        if (myTuningSystem == 2) {
+        switch myTuningSystem {
+            
+        case 0: //just intonation
+            determineJustIntonationHarmonicFrequency(adjustedInterval)
+        
+        case 2: //equal temperament
             determineEqualTemperamentHarmonicFrequency(adjustedInterval)
+    
+        default:
+            determineEqualTemperamentHarmonicFrequency(adjustedInterval)
+        
         }
         
-        
-        myInstrumentHarmony.frequency.value = myHarmonicFrequency
+        myInstrumentHarmony.frequency.value = Float(myHarmonicFrequency)
         
     }
     
@@ -347,7 +388,7 @@ class IntervalsViewController: UIViewController {
 
     func determineFundamentalFrequency() {
         
-        myFundamentalFrequency = frequencies[String(myFundamentalNote + myFundamentalQuality)]! * Float(pow(Double(2),4))
+        myFundamentalFrequency = frequencies[String(myFundamentalNote + myFundamentalQuality)]! * pow(Double(2),4)
 
 
     }
@@ -358,7 +399,15 @@ class IntervalsViewController: UIViewController {
         
         //equal temperament frequency equation: https://en.wikipedia.org/wiki/Equal_temperament
         //                                      (section: Calculating absolute frequencies)
-        myHarmonicFrequency = myFundamentalFrequency * pow( pow(2, (1/12)), Float(adjustedInterval))
+        myHarmonicFrequency = myFundamentalFrequency * pow(pow(2, (1/12)), Double(adjustedInterval))
+        
+    }
+    
+    //---------------------------------------------------------------
+    
+    func determineJustIntonationHarmonicFrequency(adjustedInterval: Int) {
+        
+        myHarmonicFrequency = justRatios[adjustedInterval]! * myFundamentalFrequency
         
     }
     
@@ -383,9 +432,9 @@ class IntervalsViewController: UIViewController {
         tuningSystemLabel.text = "Equal Temperament"
         
         //TODO(quinton) set the default value of current note name and frequecy
-        myInstrumentBase.frequency.value = myFundamentalFrequency
+        myInstrumentBase.frequency.value = Float(myFundamentalFrequency)
         
-        myInstrumentHarmony.frequency.value = myHarmonicFrequency
+        myInstrumentHarmony.frequency.value = Float(myHarmonicFrequency)
         
     }
 

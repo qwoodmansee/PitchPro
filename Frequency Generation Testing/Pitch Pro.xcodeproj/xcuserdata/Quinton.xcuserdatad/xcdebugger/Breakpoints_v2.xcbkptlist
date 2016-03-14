@@ -199,11 +199,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Frequency Generation Testing/IntervalsViewController.swift"
-            timestampString = "479612968.63683"
+            timestampString = "479627276.114789"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "148"
-            endingLineNumber = "148"
+            startingLineNumber = "179"
+            endingLineNumber = "179"
             landmarkName = "IntervalsViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -215,11 +215,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Frequency Generation Testing/IntervalsViewController.swift"
-            timestampString = "479613979.714715"
+            timestampString = "479627276.114789"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "257"
-            endingLineNumber = "257"
+            startingLineNumber = "288"
+            endingLineNumber = "288"
             landmarkName = "fundamentalNoteChanged(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -247,11 +247,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Frequency Generation Testing/IntervalsViewController.swift"
-            timestampString = "479613979.714715"
+            timestampString = "479627276.114789"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "253"
-            endingLineNumber = "253"
+            startingLineNumber = "284"
+            endingLineNumber = "284"
             landmarkName = "fundamentalNoteChanged(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -263,27 +263,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Frequency Generation Testing/IntervalsViewController.swift"
-            timestampString = "479613979.714715"
+            timestampString = "479627276.114789"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "251"
-            endingLineNumber = "251"
-            landmarkName = "fundamentalNoteChanged(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Frequency Generation Testing/IntervalsViewController.swift"
-            timestampString = "479612968.63683"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
+            startingLineNumber = "282"
+            endingLineNumber = "282"
             landmarkName = "IntervalsViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -295,27 +279,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Frequency Generation Testing/IntervalsViewController.swift"
-            timestampString = "479613979.714715"
+            timestampString = "479627276.114789"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "271"
-            endingLineNumber = "271"
-            landmarkName = "fundamentalNoteChanged(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Frequency Generation Testing/IntervalsViewController.swift"
-            timestampString = "479613979.714715"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "247"
-            endingLineNumber = "247"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
             landmarkName = "IntervalsViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -327,11 +295,43 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Frequency Generation Testing/IntervalsViewController.swift"
-            timestampString = "479613979.714715"
+            timestampString = "479627276.114789"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "327"
-            endingLineNumber = "327"
+            startingLineNumber = "302"
+            endingLineNumber = "302"
+            landmarkName = "fundamentalNoteChanged(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Frequency Generation Testing/IntervalsViewController.swift"
+            timestampString = "479627276.114789"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "278"
+            endingLineNumber = "278"
+            landmarkName = "tuningSystemSliderValueChanged(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Frequency Generation Testing/IntervalsViewController.swift"
+            timestampString = "479627276.114789"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "358"
+            endingLineNumber = "358"
             landmarkName = "determineIntervalFrequency()"
             landmarkType = "5">
          </BreakpointContent>
@@ -343,11 +343,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Frequency Generation Testing/IntervalsViewController.swift"
-            timestampString = "479613979.714715"
+            timestampString = "479627276.114789"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "309"
-            endingLineNumber = "309"
+            startingLineNumber = "340"
+            endingLineNumber = "340"
             landmarkName = "determineIntervalFrequency()"
             landmarkType = "5">
          </BreakpointContent>
@@ -359,12 +359,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Frequency Generation Testing/IntervalsViewController.swift"
-            timestampString = "479613979.714715"
+            timestampString = "479627276.114789"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "289"
-            endingLineNumber = "289"
-            landmarkName = "intervalDirectionChanged(_:)"
+            startingLineNumber = "320"
+            endingLineNumber = "320"
+            landmarkName = "IntervalsViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Frequency Generation Testing/IntervalsViewController.swift"
+            timestampString = "479627276.114789"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "381"
+            endingLineNumber = "381"
+            landmarkName = "determineIntervalFrequency()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
