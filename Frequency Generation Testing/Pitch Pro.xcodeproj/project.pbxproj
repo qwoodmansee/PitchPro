@@ -15,6 +15,7 @@
 		5A3A88711C453921001374A5 /* Frequency_Generation_TestingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3A88701C453921001374A5 /* Frequency_Generation_TestingUITests.swift */; };
 		5A60BFE01C47FDD30001412B /* IntervalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A60BFDF1C47FDD30001412B /* IntervalsViewController.swift */; };
 		5A9439521C4745EA004BAD96 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A9439511C4745EA004BAD96 /* Images.xcassets */; };
+		5A97F3481CC68AC5006FC74D /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A97F3471CC68AC5006FC74D /* SegmentedControl.swift */; };
 		5AA1A9B31C45BB4D00EF2850 /* Instrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA1A9B21C45BB4D00EF2850 /* Instrument.swift */; };
 		5AD424831C95E1FE001B50FB /* libAudioKit iOS Static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A668B3C1C8F89560038FB65 /* libAudioKit iOS Static.a */; };
 		5AF65F081CC679660055620D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AF65F071CC679660055620D /* Assets.xcassets */; };
@@ -88,6 +89,7 @@
 		5A60BFDF1C47FDD30001412B /* IntervalsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntervalsViewController.swift; sourceTree = "<group>"; };
 		5A668B341C8F89560038FB65 /* AudioKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = AudioKit.xcodeproj; sourceTree = "<group>"; };
 		5A9439511C4745EA004BAD96 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5A97F3471CC68AC5006FC74D /* SegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
 		5AA1A9B21C45BB4D00EF2850 /* Instrument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Instrument.swift; sourceTree = "<group>"; };
 		5AEDAEA51C455D1C00F1FD39 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		5AF65F071CC679660055620D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				5AF65F071CC679660055620D /* Assets.xcassets */,
 				5A9439511C4745EA004BAD96 /* Images.xcassets */,
 				5A60BFDF1C47FDD30001412B /* IntervalsViewController.swift */,
+				5A97F3471CC68AC5006FC74D /* SegmentedControl.swift */,
 			);
 			path = "Frequency Generation Testing";
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				5AA1A9B31C45BB4D00EF2850 /* Instrument.swift in Sources */,
 				5A60BFE01C47FDD30001412B /* IntervalsViewController.swift in Sources */,
 				5A3A88531C453920001374A5 /* ViewController.swift in Sources */,
+				5A97F3481CC68AC5006FC74D /* SegmentedControl.swift in Sources */,
 				5A3A88511C453920001374A5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     
     var frequencies: [Float] = [16.35,17.32,18.35,19.45,20.60,21.83,23.12,24.50,25.96,27.50,29.14,30.87]
 
+    var flat : Bool = false
+    var sharp : Bool = false
     
     let myInstrument = BasicSynth()
     @IBOutlet weak var currentOctave: UIStepper!
@@ -22,13 +24,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        for view in self.view.subviews as [UIView] {
-            if let btn = view as? UIButton {
-                btn.layer.cornerRadius = 5
-                btn.layer.borderWidth = 1
-                btn.layer.borderColor = UIColor.blueColor().CGColor
-            }
-        }
         
         // Do any additional setup after loading the view, typically from a nib.
         AKOrchestra.addInstrument(myInstrument)

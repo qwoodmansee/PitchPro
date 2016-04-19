@@ -567,33 +567,6 @@
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="Pipe Background" translatesAutoresizingMaskIntoConstraints="NO" id="USt-tT-d4Q">
                                 <rect key="frame" x="10" y="156" width="354" height="356"/>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="Sharp" translatesAutoresizingMaskIntoConstraints="NO" id="jNi-l8-MGw">
-                                <rect key="frame" x="215" y="311" width="45" height="45"/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="Flat" translatesAutoresizingMaskIntoConstraints="NO" id="jfR-Lq-RNB">
-                                <rect key="frame" x="113" y="311" width="46" height="46"/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="A Button" translatesAutoresizingMaskIntoConstraints="NO" id="SOZ-IL-ul0">
-                                <rect key="frame" x="165" y="169" width="45" height="46"/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="C Button" translatesAutoresizingMaskIntoConstraints="NO" id="qOc-1E-FCr">
-                                <rect key="frame" x="310" y="311" width="45" height="46"/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="E Button" translatesAutoresizingMaskIntoConstraints="NO" id="iwT-A6-zeO">
-                                <rect key="frame" x="165" y="453" width="45" height="46"/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="G Button" translatesAutoresizingMaskIntoConstraints="NO" id="dHI-iE-HG8">
-                                <rect key="frame" x="20" y="311" width="45" height="46"/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="D Button" translatesAutoresizingMaskIntoConstraints="NO" id="hZh-CG-ah7">
-                                <rect key="frame" x="272" y="403" width="45" height="46"/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="F Button" translatesAutoresizingMaskIntoConstraints="NO" id="c6t-1x-ZB7">
-                                <rect key="frame" x="61" y="403" width="45" height="46"/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="B Button" translatesAutoresizingMaskIntoConstraints="NO" id="aM7-qB-iEd">
-                                <rect key="frame" x="264" y="219" width="45" height="46"/>
-                            </imageView>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="5Uj-gj-ZL6" customClass="AKPropertySlider">
                                 <rect key="frame" x="8" y="629" width="204" height="31"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -616,6 +589,38 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MpI-QP-sHK" userLabel="A Button">
+                                <rect key="frame" x="165" y="169" width="46" height="46"/>
+                                <state key="normal" title="Button" image="A Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SST-RN-3nR" userLabel="B Button">
+                                <rect key="frame" x="264" y="219" width="46" height="46"/>
+                                <state key="normal" title="Button" image="B Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QXb-aA-lbG" userLabel="C Button">
+                                <rect key="frame" x="310" y="311" width="46" height="46"/>
+                                <state key="normal" title="Button" image="C Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PCW-lO-9vf" userLabel="D Button">
+                                <rect key="frame" x="272" y="403" width="46" height="46"/>
+                                <state key="normal" title="Button" image="D Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Lb-9X-tJA" userLabel="E Button">
+                                <rect key="frame" x="165" y="453" width="46" height="46"/>
+                                <state key="normal" title="Button" image="E Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lBi-uE-nMe" userLabel="F Button">
+                                <rect key="frame" x="61" y="403" width="46" height="46"/>
+                                <state key="normal" title="Button" image="F Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Zf-Ke-kWM" userLabel="G Button">
+                                <rect key="frame" x="20" y="311" width="46" height="46"/>
+                                <state key="normal" title="Button" image="G Button"/>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VHM-89-u0C" customClass="QSegmentedControl" customModule="Pitch_Pro" customModuleProvider="target">
+                                <rect key="frame" x="115" y="298" width="144" height="59"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -637,10 +642,8 @@
         <image name="D Button" width="45" height="46"/>
         <image name="E Button" width="45" height="46"/>
         <image name="F Button" width="45" height="46"/>
-        <image name="Flat" width="46" height="46"/>
         <image name="G Button" width="45" height="46"/>
         <image name="Pipe Background" width="354" height="356"/>
-        <image name="Sharp" width="45" height="45"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="g9G-yW-L9L"/>
