@@ -44,7 +44,7 @@ extension UISegmentedControl {
 class IntervalsViewController: UIViewController {
 
     //base frequencies upon which all intervals will be decided.
-    var frequencies: [String : Double] = [
+    let frequencies: [String : Double] = [
         "C♮" : 16.35,
         "C#": 17.32,
         "D♮" : 18.35,
@@ -61,7 +61,7 @@ class IntervalsViewController: UIViewController {
     //ratios to find frequencies in just intonation
     //TODO(quinton): make this go from -13 to 13, to account for augmented octaves up and down.
 
-    var justRatios: [Int : Double] = [
+    let justRatios: [Int : Double] = [
         -12 : Double(1.0/2.0),
         -11 : Double(8.0/15.0),
         -10 : Double(5.0/9.0),
@@ -88,7 +88,32 @@ class IntervalsViewController: UIViewController {
         11  : Double(15.0/8.0),
         12  : Double(2.0)]
 
-
+    let pythagreanRatios: [Int: Double] = [
+        -12 : Double(1.0/2.0),
+        -11 : Double(128.0/243.0), //M7D
+        -10 : Double(9.0/16.0), //m7D
+        -9  : Double(16.0/27.0), //M7D
+        -8  : Double(81.0/128.0), //m6D
+        -7  : Double(2.0/3.0), //P5D
+        -6  : Double(512.0/729.0), //Aug4D
+        -5  : Double(3.0/4.0), //P4D
+        -4  : Double(64.0/81.0), //M3D
+        -3  : Double(27.0/32.0), //m3D
+        -2  : Double(8.0/9.0), //M2D
+        -1  : Double(243.0/256.0), //m2D
+        0   : Double(1.0),
+        1   : Double(256.0/243.0), //m2
+        2   : Double(9.0/8.0), //M2
+        3   : Double(32.0/27.0), //m3
+        4   : Double(81.0/64.0), //M3
+        5   : Double(4.0/3.0), //P4
+        6   : Double(729.0/512.0), //Aug4
+        7   : Double(3.0/2.0), //P5
+        8   : Double(128.0/81.0), //m6
+        9   : Double(27.0/16.0), //M6
+        10  : Double(16.0/9.0), //m7
+        11  : Double(243.0/128.0), //M7
+        12  : Double(2.0)] //Oct
 
     //instruments which will play basic sine waves
     let myInstrumentBase = BasicSynth()
@@ -266,10 +291,12 @@ class IntervalsViewController: UIViewController {
             tuningSystemLabel.text = "Pythagorean"
         case 2:
             tuningSystemLabel.text = "Equal Temperament"
+        /*
         case 3:
             tuningSystemLabel.text = "Well Temperament"
         case 4:
             tuningSystemLabel.text = "Meantone Temperament"
+        */
         default:
             tuningSystemLabel.text = "Error"
         }
@@ -371,6 +398,9 @@ class IntervalsViewController: UIViewController {
             
         case 0: //just intonation
             determineJustIntonationHarmonicFrequency(adjustedInterval)
+            
+        case 1: //Pythagrean 
+            determinePythagoreanHarmonicFrequency(adjustedInterval)
         
         case 2: //equal temperament
             determineEqualTemperamentHarmonicFrequency(adjustedInterval)
@@ -411,6 +441,14 @@ class IntervalsViewController: UIViewController {
         
     }
     
+    //---------------------------------------------------------------
+    //got from http://www.medieval.org/emfaq/harmony/pyth4.html
+    func determinePythagoreanHarmonicFrequency(adjustedInterval: Int) {
+        
+        myHarmonicFrequency = pythagreanRatios[adjustedInterval]! * myFundamentalFrequency
+
+    }
+
     //---------------------------------------------------------------
 
     override func viewDidLoad() {
