@@ -11,7 +11,7 @@ import Foundation
 
 class ViewController: UIViewController {
     
-    var frequencies: [Float] = [16.35,17.32,18.35,19.45,20.60,21.83,23.12,24.50,25.96,27.50,29.14,30.87]
+    var frequencies: [Float] = [15.445,16.35,17.32,18.35,19.45,20.60,21.83,23.12,24.50,25.96,27.50,29.14,30.87,32.70]
 
     var flat : Bool = false
     var sharp : Bool = false
@@ -20,6 +20,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var currentOctave: UIStepper!
     
     @IBOutlet weak var amplitudeSlider: AKPropertySlider!
+    
+    @IBOutlet weak var accidentalSegmentedControl: QSegmentedControl!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +40,14 @@ class ViewController: UIViewController {
     }
 
     @IBAction func PlayC(sender: AnyObject) {
-        let temp : Int = sender.tag - 1
+        var temp : Int = sender.tag
+        if accidentalSegmentedControl.selectedIndex == 0 {
+            temp -= 1
+        }
+        else if accidentalSegmentedControl.selectedIndex == 2 {
+            temp += 1
+        }
+        
         print(temp)
         myInstrument.frequency.value = frequencies[temp] * Float(pow(Double(2),Double(currentOctave.value)))
         myInstrument.play()

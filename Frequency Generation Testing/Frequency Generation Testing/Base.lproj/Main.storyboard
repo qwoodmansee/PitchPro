@@ -384,13 +384,18 @@
                                 <rect key="frame" x="0.0" y="20" width="376" height="44"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.46666666670000001" green="0.1843137255" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="Pitch Pro" id="deW-rA-epX">
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="yWw-xc-WWe">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4rN-jI-ddj">
                                                 <rect key="frame" x="277" y="7" width="83" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Done"/>
+                                                <state key="normal" title="Done">
+                                                    <color key="titleColor" red="0.46666666670000001" green="0.1843137255" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="doneButtonClicked:" destination="jHi-RK-pgh" eventType="touchUpInside" id="iY5-qM-T7x"/>
                                                 </connections>
@@ -401,6 +406,7 @@
                             </navigationBar>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="1" maxValue="8" translatesAutoresizingMaskIntoConstraints="NO" id="Njc-1X-3n9">
                                 <rect key="frame" x="18" y="106" width="181" height="31"/>
+                                <color key="tintColor" red="0.46666666670000001" green="0.1843137255" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="intervalSliderValueChanged:" destination="jHi-RK-pgh" eventType="valueChanged" id="ngA-Hj-Vd9"/>
                                 </connections>
@@ -428,6 +434,7 @@
                                     <segment title="A"/>
                                     <segment title="B"/>
                                 </segments>
+                                <color key="tintColor" red="0.46666666670000001" green="0.1843137255" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="fundamentalNoteChanged:" destination="jHi-RK-pgh" eventType="valueChanged" id="BjO-YA-M43"/>
                                 </connections>
@@ -445,6 +452,7 @@
                                     <segment title="♮"/>
                                     <segment title="♯"/>
                                 </segments>
+                                <color key="tintColor" red="0.46666666670000001" green="0.1843137255" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Shx-Dv-8bj">
                                 <rect key="frame" x="22" y="574" width="173" height="29"/>
@@ -452,19 +460,22 @@
                                     <segment title="Ascending"/>
                                     <segment title="Descending"/>
                                 </segments>
+                                <color key="tintColor" red="0.46666666670000001" green="0.1843137255" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="intervalDirectionChanged:" destination="jHi-RK-pgh" eventType="valueChanged" id="iEn-x3-uF9"/>
                                 </connections>
                             </segmentedControl>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="0.0" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="yVs-z4-ASa">
+                            <slider opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="0.0" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="yVs-z4-ASa">
                                 <rect key="frame" x="18" y="306" width="181" height="31"/>
+                                <color key="tintColor" red="0.46666666670000001" green="0.1843137255" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="tuningSystemSliderValueChanged:" destination="jHi-RK-pgh" eventType="valueChanged" id="zgl-kf-LjT"/>
                                 </connections>
                             </slider>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="otB-ox-hxM">
                                 <rect key="frame" x="274" y="564" width="51" height="31"/>
-                                <color key="onTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.46666666670000001" green="0.1843137255" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="onTintColor" red="0.46666666670000001" green="0.1843137255" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="playSwitchChanged:" destination="jHi-RK-pgh" eventType="valueChanged" id="MJR-R1-Q4o"/>
                                 </connections>
@@ -481,6 +492,7 @@
                                     <segment title="Harmonic"/>
                                     <segment title="Melodic"/>
                                 </segments>
+                                <color key="tintColor" red="0.46666666670000001" green="0.1843137255" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="harmonicMelodicSegmentedControlValueChanged:" destination="jHi-RK-pgh" eventType="valueChanged" id="N1T-c8-VhE"/>
                                 </connections>
@@ -501,6 +513,7 @@
                                     <segment title="maj"/>
                                     <segment title="aug"/>
                                 </segments>
+                                <color key="tintColor" red="0.46666666670000001" green="0.1843137255" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="intervalQualityValueChanged:" destination="jHi-RK-pgh" eventType="valueChanged" id="qBE-90-Cae"/>
                                 </connections>
@@ -531,7 +544,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3aT-fr-Mgr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="385.5" y="304.5"/>
+            <point key="canvasLocation" x="395.5" y="346.5"/>
         </scene>
         <!--Pitch Pipe-->
         <scene sceneID="zeD-jU-W1g">
@@ -545,17 +558,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QNn-Uj-zFq">
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QNn-Uj-zFq">
                                 <rect key="frame" x="-1" y="20" width="376" height="44"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.46666666670000001" green="0.1843137255" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="Pitch Pro" id="zvu-BU-JBP">
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="DSc-2g-hvz">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="m5W-FI-MUJ">
                                                 <rect key="frame" x="277" y="7" width="83" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Intervals"/>
+                                                <state key="normal" title="Intervals">
+                                                    <color key="titleColor" red="0.46666666670000001" green="0.1843137255" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
                                                 <connections>
                                                     <segue destination="jHi-RK-pgh" kind="modal" id="g9G-yW-L9L"/>
                                                 </connections>
@@ -569,70 +587,93 @@
                             </imageView>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="5Uj-gj-ZL6" customClass="AKPropertySlider">
                                 <rect key="frame" x="8" y="629" width="204" height="31"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.46666666670000001" green="0.1843137255" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
                             </slider>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" maximumValue="7" translatesAutoresizingMaskIntoConstraints="NO" id="8mW-og-fQj">
                                 <rect key="frame" x="270" y="629" width="94" height="29"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.46666666666666667" green="0.18431372549019609" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
                             </stepper>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Volume" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EcJ-n1-wGg">
                                 <rect key="frame" x="81" y="600" width="58" height="21"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Octave" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WON-lD-hdd">
                                 <rect key="frame" x="290" y="600" width="55" height="21"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MpI-QP-sHK" userLabel="A Button">
-                                <rect key="frame" x="165" y="169" width="46" height="46"/>
-                                <state key="normal" title="Button" image="A Button"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SST-RN-3nR" userLabel="B Button">
+                            <button opaque="NO" tag="12" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SST-RN-3nR" userLabel="B Button">
                                 <rect key="frame" x="264" y="219" width="46" height="46"/>
                                 <state key="normal" title="Button" image="B Button"/>
+                                <connections>
+                                    <action selector="PlayC:" destination="UME-xX-gdu" eventType="touchDown" id="gUv-NL-fZh"/>
+                                    <action selector="StopPlayingC:" destination="UME-xX-gdu" eventType="touchUpInside" id="GGQ-Om-IcY"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QXb-aA-lbG" userLabel="C Button">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QXb-aA-lbG" userLabel="C Button">
                                 <rect key="frame" x="310" y="311" width="46" height="46"/>
                                 <state key="normal" title="Button" image="C Button"/>
+                                <connections>
+                                    <action selector="PlayC:" destination="UME-xX-gdu" eventType="touchDown" id="dj0-yh-zzv"/>
+                                    <action selector="StopPlayingC:" destination="UME-xX-gdu" eventType="touchUpInside" id="f16-WT-K8S"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PCW-lO-9vf" userLabel="D Button">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PCW-lO-9vf" userLabel="D Button">
                                 <rect key="frame" x="272" y="403" width="46" height="46"/>
                                 <state key="normal" title="Button" image="D Button"/>
+                                <connections>
+                                    <action selector="PlayC:" destination="UME-xX-gdu" eventType="touchDown" id="nzo-M8-s25"/>
+                                    <action selector="StopPlayingC:" destination="UME-xX-gdu" eventType="touchUpInside" id="y1S-kP-nf1"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Lb-9X-tJA" userLabel="E Button">
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Lb-9X-tJA" userLabel="E Button">
                                 <rect key="frame" x="165" y="453" width="46" height="46"/>
                                 <state key="normal" title="Button" image="E Button"/>
+                                <connections>
+                                    <action selector="PlayC:" destination="UME-xX-gdu" eventType="touchDown" id="7wA-Hi-rsD"/>
+                                    <action selector="StopPlayingC:" destination="UME-xX-gdu" eventType="touchUpInside" id="aal-oP-PbI"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lBi-uE-nMe" userLabel="F Button">
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lBi-uE-nMe" userLabel="F Button">
                                 <rect key="frame" x="61" y="403" width="46" height="46"/>
                                 <state key="normal" title="Button" image="F Button"/>
+                                <connections>
+                                    <action selector="PlayC:" destination="UME-xX-gdu" eventType="touchDown" id="yDm-jO-xPV"/>
+                                    <action selector="StopPlayingC:" destination="UME-xX-gdu" eventType="touchUpInside" id="HZX-Fp-L2D"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Zf-Ke-kWM" userLabel="G Button">
+                            <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Zf-Ke-kWM" userLabel="G Button">
                                 <rect key="frame" x="20" y="311" width="46" height="46"/>
                                 <state key="normal" title="Button" image="G Button"/>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VHM-89-u0C" customClass="QSegmentedControl" customModule="Pitch_Pro" customModuleProvider="target">
-                                <rect key="frame" x="115" y="298" width="144" height="59"/>
+                                <rect key="frame" x="109" y="321" width="158" height="25"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MpI-QP-sHK" userLabel="A Button">
+                                <rect key="frame" x="165" y="169" width="46" height="46"/>
+                                <state key="normal" title="Button" image="A Button"/>
+                                <connections>
+                                    <action selector="PlayC:" destination="UME-xX-gdu" eventType="touchDown" id="CCV-Lx-BXA"/>
+                                    <action selector="StopPlayingC:" destination="UME-xX-gdu" eventType="touchUpInside" id="iP6-ta-yCt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="accidentalSegmentedControl" destination="VHM-89-u0C" id="SCk-if-e8B"/>
                         <outlet property="amplitudeSlider" destination="5Uj-gj-ZL6" id="TpI-Bp-fwO"/>
                         <outlet property="currentOctave" destination="8mW-og-fQj" id="T9p-Fu-8bj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="26h-zA-0Le" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-68.5" y="1086.5"/>
+            <point key="canvasLocation" x="-56.5" y="1102.5"/>
         </scene>
     </scenes>
     <resources>
